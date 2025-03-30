@@ -8,6 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/',(req,res)=>{
+    console.log(process.env.RENDER_API_KEY);
+
     res.send('hello world!')
 });
 console.log('Token:1', process.env.RENDER_API_KEY);
