@@ -13,7 +13,7 @@ app.get('/', async (req, res) => {
     try {
         const response = await axios.get('https://api.render.com/v1/services', {
             headers: {
-                Authorization: `Bearer ${RENDER_API_KEY}`,
+                Authorization: `Bearer ${process.env.RENDER_API_KEY}`,
             },
         });
         res.json(response.data);  // מחזיר את רשימת האפליקציות ב-JSON
