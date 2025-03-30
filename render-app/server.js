@@ -32,7 +32,7 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const renderApiKey = process.env.RENDER_API_KEY;  // השתמש במשתנה סביבה
+const renderApiKey = process.env.REACT_APP_RENDER_API_KEY;  // השתמש במשתנה סביבה
 
 app.get('/', async (req, res) => {
     try {
