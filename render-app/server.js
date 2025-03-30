@@ -7,11 +7,11 @@ const port = process.env.PORT || 3000;
 
 // API Key של Render
 const renderApiKey = 'rnd_tHKPhbHuNTrLEg5UXch4rmvTTfRu';  // החלף בזה את ה-API Key שלך
-app.get('/', (req, res) => {
-    res.send('Hello World!');  // או כל תוכן אחר שתרצי
-});
+// app.get('/', (req, res) => {
+//     res.send('Hello World!');  // או כל תוכן אחר שתרצי
+// });
 
-app.get('/apps', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         const response = await axios.get('https://api.render.com/v1/services', {
             headers: {
