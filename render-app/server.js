@@ -10,10 +10,11 @@ const PORT = process.env.PORT || 3000;
 app.get('/',(req,res)=>{
     res.send('hello world!')
 });
-console.log('Token:', process.env.RENDER_API_KEY);
+console.log('Token:1', process.env.RENDER_API_KEY);
 
 app.get('/services', async (req, res) => {
     try {
+        console.log('Token:2', process.env.RENDER_API_KEY);
 
         const response = await axios.get('https://api.render.com/v1/services?limit=20', {
             headers: {
